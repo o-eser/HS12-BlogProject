@@ -20,7 +20,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient<IApiService, ApiService>(opt =>
 {
-	opt.BaseAddress = new Uri("https://localhost:7008/api/");
+	opt.BaseAddress = new Uri("o-eser-blogtestapi.azurewebsites.net/api");
 });
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
