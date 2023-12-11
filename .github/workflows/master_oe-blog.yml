@@ -22,14 +22,11 @@ jobs:
           dotnet-version: '6.0.x'
           include-prerelease: true
 
-      - name: Set working directory to Presentation project
-        run: cd HS12-BlogProject/HS12-BlogProject.Presentation
-
       - name: Build with dotnet
-        run: dotnet build HS12_BlogProject.Presentation.csproj --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish .\HS12_BlogProject.Presentation\HS12_BlogProject.Presentation.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
