@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'oe-blog'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D72272EFC2D4591B7B6F8F0732B3164 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: .
